@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tripwire — Robinhood Chain contracts that just changed their rules</title>
+  <meta name="description" content="A live feed of Robinhood Chain contracts whose code, admin, owner or pause state just changed. Read straight from the chain.">
+  <meta property="og:title" content="Tripwire">
+  <meta property="og:description" content="Contracts on Robinhood Chain that just changed their rules: code swaps, admin moves, owner handoffs, pauses.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand">
+      <span class="wordmark">TRIPWIRE</span>
+      <span class="wire" aria-hidden="true"></span>
+      <span class="live" id="live"><i></i><span id="live-text">Connecting</span></span>
+    </div>
+    <h1>Contracts on Robinhood Chain that just <em>changed their rules.</em></h1>
+    <p class="lede">Code swapped behind a proxy. Upgrade keys moved. Owners handed off or renounced. Contracts paused. Every event is read straight from the chain, as it happens.</p>
+  </header>
+
+  <main>
+    <section class="check" aria-labelledby="check-h">
+      <h2 id="check-h" class="label">Check a contract</h2>
+      <form id="check-form" class="check-form" autocomplete="off">
+        <input id="check-input" name="address" type="text" inputmode="text" spellcheck="false"
+               placeholder="Paste a 0x address" aria-label="Contract address">
+        <button type="submit">Check rules</button>
+      </form>
+      <p class="hint" id="check-hint">Shows who controls it right now and every time its rules changed, back to launch.</p>
+      <div id="dossier" class="dossier" hidden></div>
+    </section>
+
+    <section class="feed" aria-labelledby="feed-h">
+      <div class="feed-head">
+        <h2 id="feed-h" class="label">Rule changes</h2>
+        <div class="ranges" role="radiogroup" aria-label="Time range" id="ranges"></div>
+      </div>
+
+      <figure class="seismo" aria-label="Rule changes over time">
+        <svg id="seismo" preserveAspectRatio="none" role="img"></svg>
+        <figcaption><span id="seismo-start"></span><span id="seismo-end">now</span></figcaption>
+      </figure>
+
+      <div class="filters">
+        <div class="chips" id="chips" role="group" aria-label="Event types"></div>
+        <label class="toggle"><input type="checkbox" id="traded-only"><span>Traded tokens only</span></label>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <ol class="events" id="events"></ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Read-only. Tripwire reads public event logs and contract state from the Robinhood Chain RPC. An event is a signal to look closer, not a verdict on a project. Not financial advice.</p>
+  </footer>
+
+  <template id="row-tpl">
+    <li class="event">
+      <time class="when"></time>
+      <span class="tag"></span>
+      <div class="what">
+        <button type="button" class="who"></button>
+        <span class="mcap"></span>
+        <p class="line"></p>
+      </div>
+      <nav class="links"></nav>
+    </li>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
