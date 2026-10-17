@@ -10,7 +10,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const OUT = { svg: resolve(here, 'svg'), png: resolve(here, 'png'), posts: resolve(here, 'posts') };
 Object.values(OUT).forEach((d) => mkdirSync(d, { recursive: true }));
 
-const SITE = 'tripwire-five-sable.vercel.app';
+const SITE = 'tripwire.top';
 const WORD = 'TRIPWIRE';
 const WORD_SPACING = 0.06; // em
 

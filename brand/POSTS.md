@@ -1,6 +1,6 @@
 # Tripwire: social copy
 
-Link: https://tripwire-five-sable.vercel.app
+Link: https://tripwire.top
 
 ## X profile
 
@@ -19,7 +19,7 @@ Link: https://tripwire-five-sable.vercel.app
 >
 > Straight from the chain. No wallet, no sign-up.
 >
-> tripwire-five-sable.vercel.app
+> tripwire.top
 
 **2/** · image: `posts/post-2-what-trips-it.png`
 > What trips the wire:
@@ -47,7 +47,7 @@ Link: https://tripwire-five-sable.vercel.app
 > 13 pauses
 >
 > The wire is live. Check yours 👇
-> tripwire-five-sable.vercel.app
+> tripwire.top
 
 ---
 
@@ -58,7 +58,7 @@ Link: https://tripwire-five-sable.vercel.app
 >
 > Tripwire watches every one, live.
 >
-> tripwire-five-sable.vercel.app
+> tripwire.top
 
 **Utility hook**
 > Before you ape: paste the CA into Tripwire.
@@ -92,7 +92,7 @@ Link: https://tripwire-five-sable.vercel.app
 > Paste any token to see who controls it now and its full rule-change history since launch.
 >
 > Read straight from the chain. No wallet needed.
-> 👉 tripwire-five-sable.vercel.app
+> 👉 tripwire.top
 
 ---
 
