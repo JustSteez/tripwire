@@ -2,6 +2,8 @@
 
 A live feed of **Robinhood Chain** contracts that just changed their rules: code swapped behind a proxy, upgrade admins moved, owners handed off or renounced, contracts paused. Paste any token to see who controls it right now and every time its rules changed since launch.
 
+**Live:** https://tripwire-five-sable.vercel.app
+
 ## What it catches
 
 | Event | Signal |
