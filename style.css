@@ -263,8 +263,30 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter) 40px; display
 .member i { font-style: normal; font-weight: 600; color: var(--ink-2); }
 .more { padding: 14px; font: 13px var(--mono); color: var(--muted); }
 
-.foot { max-width: 1180px; margin: 0 auto; padding: 24px var(--gutter) 48px; border-top: 1px solid var(--rule); }
+.foot { max-width: 1180px; margin: 0 auto; padding: 24px var(--gutter) 48px; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; }
 .foot p { margin: 0; max-width: 640px; font-size: 13px; color: var(--muted); }
+.x-glyph { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.x-link {
+  display: inline-grid; place-items: center;
+  width: 32px; height: 32px; margin-left: 4px;
+  border: 1.5px solid var(--ink); border-radius: 50%;
+  color: var(--ink);
+  transition: background var(--fast), color var(--fast);
+}
+.x-link:hover { background: var(--ink); color: var(--paper); }
+.x-follow {
+  order: 2;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--radius);
+  text-decoration: none; font-size: 14px;
+  box-shadow: 4px 4px 0 var(--high);
+  transition: transform var(--fast), box-shadow var(--fast);
+}
+.x-follow:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--high); }
+.x-follow:active { transform: none; box-shadow: 2px 2px 0 var(--high); }
+.x-follow b { font-family: var(--mono); font-weight: 600; }
 
 @media (max-width: 760px) {
   .event { grid-template-columns: 1fr auto; gap: 4px 12px; }
