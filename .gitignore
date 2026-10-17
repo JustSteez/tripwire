@@ -1,6 +1,6 @@
 node_modules/
+brand/node_modules/
+.vercel
 .DS_Store
 *.log
-.vercel
-
-.vercel
+*.zip
